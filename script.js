@@ -93,6 +93,10 @@ const heartBtns = document.getElementsByClassName("heart");
           alert("Copied: " + text);
         });
         
+        let beforeCopy =gerElement('copy-num').innerText;
+        let copyCount = parseInt(beforeCopy);
+        let finalCount = copyCount + 1;
+        gerElement('copy-num').innerText = finalCount;
 
 
         }
