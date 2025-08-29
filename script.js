@@ -25,7 +25,7 @@ const heartBtns = document.getElementsByClassName("heart");
     };
 
 
-    //card function//
+    //callBtn function//
     gerElement('allcard').addEventListener('click', function(e) {
         if(e.target.className.includes('call-btn')) {
           const callBtn =e.target;
@@ -81,7 +81,27 @@ const heartBtns = document.getElementsByClassName("heart");
 
 
 
+  //copyBtn function//
+  gerElement('allcard').addEventListener('click', function(e) {
+        if(e.target.className.includes('copy-btn')) {
+          const copyBtn =e.target;
+         
+          let text =copyBtn.parentNode.parentNode.children[2].children[0].innerText;
+        
+
+        navigator.clipboard.writeText(text).then(() => {
+          alert("Copied: " + text);
+        });
+        
+
+
+        }
+      });
 
 
 
+
+
+
+    
 
